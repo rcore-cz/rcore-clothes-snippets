@@ -1,4 +1,4 @@
-# x-radio-snippets
+# rcore-clothes-snippets
 ---
 
 #### Here are all snippets made by community/rcore dev team!
