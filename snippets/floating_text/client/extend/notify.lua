@@ -13,7 +13,7 @@ CreateThread(function()
         canShow = false
         for _, v in pairs(Config.Stores) do
             for key, value in pairs(v.sections) do
-                if #(value.pos - playerPos) < 3.5 then
+                if #(value.pos - GetEntityCoords(PlayerPedId())) < 3.5 then
                     canShow = true
                     textPosition = value.pos
                 end
