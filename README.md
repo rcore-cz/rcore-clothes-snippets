@@ -11,7 +11,7 @@ locales
 ---
 
 Snippets 
-- nothing yet, want to be first? Make a pull request!
+- floating_text, makes floating help text - By Xogos
 
 ---
 
