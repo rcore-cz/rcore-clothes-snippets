@@ -2,6 +2,8 @@ local canShow = false
 local textToShow = ""
 local textPosition = vector3(0, 0, 0)
 
+Config.ChangePoint.label = "🕵️‍♀️"
+
 function ShowHelpNotification(text)
     textToShow = text
 end
@@ -11,12 +13,21 @@ CreateThread(function()
     while true do
         Wait(1000)
         canShow = false
+        local pPos = GetEntityCoords(PlayerPedId())
         for _, v in pairs(Config.Stores) do
             for key, value in pairs(v.sections) do
-                if #(value.pos - GetEntityCoords(PlayerPedId())) < 3.5 then
+                if #(value.pos - pPos) < 3.5 then
                     canShow = true
                     textPosition = value.pos
                 end
+            end
+        end
+
+        for k,v in pairs(Config.ChangePoint.points) do
+            if #(v - pPos) < 3.5 then
+                canShow = true
+                textPosition = value
+                textToShow = Config.ChangePoint.help
             end
         end
     end
