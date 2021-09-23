@@ -1,3 +1,1 @@
-Soo... empty...
-
-Want to try make pull request? 
+- floating_text, makes floating help text - By Xogos
